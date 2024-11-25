@@ -1,4 +1,4 @@
-Data types specifies what type of value your field/column is holding. There are various data types in sql -:
+Data types specify what type of value your field/column is holding. There are various data types in SQL -:
 
 1. Numeric Data Types
     .Used to store numeric values.
@@ -24,6 +24,18 @@ Data types specifies what type of value your field/column is holding. There are 
    .NCHAR(n): Fixed-length Unicode string.
    .NVARCHAR(n): Variable-length Unicode string.
    .NTEXT: Large variable-length Unicode text.
+
+  *********Example*********
+
+CREATE TABLE Employees (
+    EmployeeID INT PRIMARY KEY,
+    FirstName VARCHAR(50),
+    LastName VARCHAR(50),
+    BirthDate DATE,
+    HireDate DATETIME,
+    Salary DECIMAL(10, 2),
+    IsActive BOOLEAN
+);
 
 4. Binary Data Types
    .Used to store binary data (e.g., images, files).
