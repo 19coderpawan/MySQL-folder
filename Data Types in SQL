@@ -1,0 +1,50 @@
+Data types specifies what type of value your field/column is holding. There are various data types in sql -:
+
+1. Numeric Data Types
+    .Used to store numeric values.
+->Common types include:
+  .INT: Standard integer type.
+  .TINYINT: Very small integer (typically 1 byte).
+  .SMALLINT: Small integer (typically 2 bytes).
+  .BIGINT: Large integer (typically 8 bytes).
+  .DECIMAL(p,s): Fixed-point number with precision p and scale s.
+  .FLOAT: Floating-point number, approximate numeric.
+  .REAL: Similar to FLOAT but with less precision.
+
+2. Character String Data Types
+    .Used to store alphanumeric characters.
+->Common types include:
+  .CHAR(n): Fixed-length string, padded with spaces if necessary.
+  .VARCHAR(n): Variable-length string, up to n characters.
+  .TEXT: Large variable-length string for larger text data.
+
+3. Unicode Character String Data Types
+    .Similar to character string types but designed to support international characters.
+->Common types include:
+   .NCHAR(n): Fixed-length Unicode string.
+   .NVARCHAR(n): Variable-length Unicode string.
+   .NTEXT: Large variable-length Unicode text.
+
+4. Binary Data Types
+   .Used to store binary data (e.g., images, files).
+->Common types include:
+   .BINARY(n): Fixed-length binary data.
+   .VARBINARY(n): Variable-length binary data.
+   .BLOB: Binary Large Object for storing large binary data
+
+5. Date and Time Data Types
+    .Used to store date and time information.
+->Common types include:
+   .DATE: Stores date in the format YYYY-MM-DD.
+   .TIME: Stores time in the format HH:MM:SS.
+   .DATETIME: Stores both date and time.
+   .TIMESTAMP: Stores a timestamp value, often used for tracking changes.
+
+6. Miscellaneous Data Types
+  ->Other specialized data types include:
+    .BOOLEAN: Stores TRUE or FALSE values.
+    .ENUM: A string object with a value chosen from a list of permitted values.
+    .SET: A string object that can have zero or more values, each of which must be chosen from a list of permitted values.
+    .CLOB: Character large object used to store large text data.
+    .XML: Used to store XML documents.
+    .JSON: Used to store JSON formatted data.
