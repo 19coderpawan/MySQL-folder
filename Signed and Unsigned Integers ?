@@ -15,17 +15,17 @@
                             value SMALLINT SIGNED
                         );
 
-2. Unsigned Integers
-Definition: Unsigned integers can only represent non-negative values (zero and positive numbers). This allows for a larger upper range of values since there is no need to allocate space for negative numbers.
-Range: For an unsigned integer type, the range typically is:
-TINYINT UNSIGNED: 0 to 255
-SMALLINT UNSIGNED: 0 to 65,535
-MEDIUMINT UNSIGNED: 0 to 16,777,215
-INT UNSIGNED: 0 to 4,294,967,295
-BIGINT UNSIGNED: 0 to 18,446,744,073,709,551,615
-Example of Unsigned Integer Declaration in MySQL:
-sql
-CREATE TABLE ExampleUnsigned (
-    id INT UNSIGNED,
-    quantity SMALLINT UNSIGNED
-);
+      2. Unsigned Integers
+          Definition: Unsigned integers can only represent non-negative values (zero and positive numbers). This allows for a larger upper range of values since there is no need to allocate space for negative numbers.
+            Range: For an unsigned integer type, the range typically is:
+              TINYINT UNSIGNED: 0 to 255
+              SMALLINT UNSIGNED: 0 to 65,535
+              MEDIUMINT UNSIGNED: 0 to 16,777,215
+              INT UNSIGNED: 0 to 4,294,967,295
+              BIGINT UNSIGNED: 0 to 18,446,744,073,709,551,615
+                Example of Unsigned Integer Declaration in MySQL:
+
+                    CREATE TABLE ExampleUnsigned (
+                        id INT UNSIGNED,
+                        quantity SMALLINT UNSIGNED
+                    );
