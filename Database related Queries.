@@ -1,0 +1,92 @@
+*****SQL Commands for Database Management*****
+
+1.Create Database
+  Command:
+    CREATE DATABASE db_name;
+
+  Description: This command creates a new database with the specified name.
+    Example:
+      CREATE DATABASE CompanyDB;
+
+2.Create Database If Not Exists
+    Command:
+      CREATE DATABASE IF NOT EXISTS db_name;
+    
+    Description: This command creates a new database only if a database with the same name does not already exist. This prevents errors if you try to create a database that already exists.
+      Example:
+        CREATE DATABASE IF NOT EXISTS CompanyDB;
+
+3.Drop Database
+Command:
+DROP DATABASE db_name;
+
+Description: This command deletes the specified database and all its contents permanently. Use with caution as this action cannot be undone.
+Example:
+DROP DATABASE CompanyDB;
+
+4.Drop Database If Not Exists
+Command:
+DROP DATABASE IF EXISTS db_name;
+
+Description: This command deletes the specified database only if it exists. This prevents errors when trying to drop a non-existent database.
+Example:
+DROP DATABASE IF EXISTS CompanyDB;
+
+5.Show Databases
+Command:
+SHOW DATABASES;
+
+Description: This command lists all databases available in the MySQL server. It helps you see which databases are currently present.
+Example Output:
+text
++--------------------+
+| Database           |
++--------------------+
+| information_schema |
+| mysql              |
+| performance_schema  |
+| CompanyDB          |
++--------------------+
+
+6.Show Tables
+Command:
+SHOW TABLES;
+
+Description: This command lists all tables in the currently selected database. It helps you see what tables are available for querying.
+Example Output:
+text
++------------------+
+| Tables_in_CompanyDB |
++------------------+
+| Employees        |
+| Departments      |
++------------------+
+
+****Additional Useful SQL Commands****
+7.Use Database
+Command:
+USE db_name;
+
+Description: This command selects a specific database for use, allowing subsequent commands to operate on that database.
+Example:
+USE CompanyDB;
+
+8.Show Current Database
+Command:
+SELECT DATABASE();
+
+Description: This command returns the name of the currently selected database.
+
+9.Show Create Table
+Command:
+SHOW CREATE TABLE table_name;
+
+Description: This command shows the SQL statement used to create a specified table, including its structure and constraints.
+Example:
+SHOW CREATE TABLE Employees;
+
+10.Check Database Size
+Although there isn't a direct SQL command to check the size of a database, you can query information_schema to get details about table sizes.
+SELECT table_name, (data_length + index_length) / 1024 / 1024 AS size_mb 
+FROM information_schema.tables 
+WHERE table_schema = 'db_name';
