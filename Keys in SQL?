@@ -1,0 +1,67 @@
+****Types of Keys in SQL.****
+1.Primary Key:
+  ->Definition: A primary key is a unique identifier for each record in a table. It ensures that no two rows have the same value in that column or combination of columns.
+     Properties:
+     ->Must contain unique values.
+     ->Cannot contain NULL values.
+    ->A table can have only one primary key, which can consist of one or multiple columns (composite key).
+      Example:
+          CREATE TABLE Students (
+              StudentID INT NOT NULL,
+              Name VARCHAR(100),
+              PRIMARY KEY (StudentID)
+          );
+
+2.Foreign Key:
+  ->Definition: A foreign key is a field (or collection of fields) in one table that refers to the primary key in another table. It establishes a relationship between the two tables.
+     Properties:
+      ->Can accept duplicate values.
+      ->Can contain NULL values unless specified otherwise.
+        Example:
+          CREATE TABLE Enrollments (
+                  EnrollmentID INT NOT NULL,
+                  StudentID INT,
+                  CourseID INT,
+                  FOREIGN KEY (StudentID) REFERENCES Students(StudentID)
+              );
+
+3.Candidate Key:
+   ->Definition: A candidate key is a set of one or more columns that can uniquely identify a record in a table. Each candidate key can potentially serve as a primary key.
+        Properties:
+         -> Must contain unique values.
+         -> Cannot contain NULL values.
+         -> Example: In a Students table, both StudentID and Email could be candidate keys if both are unique.
+
+4.Super Key:
+  ->Definition: A super key is any combination of columns that can uniquely identify rows in a table. It may include additional attributes that are not necessary for uniqueness.
+      Properties:
+        ->Can contain NULL values.
+        ->A super key includes all candidate keys but may also contain extra attributes.
+        ->Example: If StudentID and Name together can uniquely identify students, then {StudentID, Name} is a super key.
+
+5.Alternate Key:
+   -> Definition: An alternate key is any candidate key that is not chosen as the primary key. It provides an alternative way to access records in the table.
+   -> Example: If StudentID is the primary key, then Email could be considered an alternate key.
+
+6.Composite Key:
+    Definition: A composite key is a primary key that consists of two or more columns used together to uniquely identify a record.
+    Example:
+        CREATE TABLE CourseEnrollments (
+            StudentID INT,
+            CourseID INT,
+            PRIMARY KEY (StudentID, CourseID)
+        );
+
+7.Artificial Key (Surrogate Key):
+Definition: An artificial or surrogate key is an artificially created identifier used to uniquely identify records when natural keys are either too complex or not available.
+  Properties:
+    Typically an auto-incremented integer.
+    Has no business meaning outside the database context.
+    Example:
+      CREATE TABLE Products (
+          ProductID INT AUTO_INCREMENT,
+          ProductName VARCHAR(100),
+          PRIMARY KEY (ProductID)
+      );
+
+
