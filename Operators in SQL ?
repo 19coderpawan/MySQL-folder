@@ -1,0 +1,61 @@
+****In SQL, operators are special symbols or keywords used to perform operations on data. They are integral to constructing queries and manipulating data within a database.****
+
+****Types of SQL Operators****
+1.Arithmetic Operators:
+  Used to perform mathematical operations on numeric values.
+    Operators:
+      Operator	Description	   Example
+          +	     Addition	     SELECT 5 + 2;
+          -	   Subtraction	   SELECT 5 - 2;
+          *	   Multiplication	 SELECT 5 * 2;
+          /	   Division	       SELECT 5 / 2;
+          %	   Modulo        	 SELECT 10 % 3;
+
+2.Comparison Operators:
+  Used to compare two values and return a boolean result (TRUE, FALSE, UNKNOWN).
+    Operators:
+      Operator	        Description	                        Example
+        =	                Equal to	                     WHERE age = 30;
+        <	                Less than	                     WHERE age < 30;
+        >	                Greater than	                 WHERE age > 30;
+        <=	              Less than or equal to          WHERE age <= 30;
+        >=	              Greater than or equal to	     WHERE age >= 30;
+        <>, !=	          Not equal to	                 WHERE age <> 30;
+
+3.Logical Operators:
+  Used to combine multiple conditions in a WHERE clause.
+    Operators:
+      Operator	          Description	                                       Example
+      AND	                TRUE if both conditions are TRUE	                 WHERE age > 20 AND salary > 3000;
+      OR	                TRUE if at least one condition is TRUE	           WHERE age < 20 OR salary > 3000;
+      NOT	                Reverses the result of a condition	               WHERE NOT (age < 20);
+      BETWEEN	            TRUE if a value is within a range	                 WHERE age BETWEEN 20 AND 30;
+      IN	                TRUE if a value matches any value in a list	       WHERE age IN (20, 25, 30);
+      LIKE	              TRUE if a value matches a specified pattern	       WHERE name LIKE 'A%';
+      EXISTS	            TRUE if a subquery returns one or more records	   WHERE EXISTS (SELECT * FROM table);
+
+4.Bitwise Operators:
+  Used to perform bit-level operations on integer types.
+    Operators:
+        Operator	Description
+        &	        Bitwise AND
+        `          	`
+        ^	        Bitwise XOR
+        ~	        Bitwise NOT
+
+5.Compound Operators:
+  These operators combine an arithmetic operation with an assignment.
+      Operators:
+      +=, -=, *=, /=, %= 
+      
+      Example:
+      SET total = total + amount; -- Equivalent to total += amount;
+
+6.Special Operators:
+  These operators serve specific functions in SQL queries.
+  Examples:
+    ->ALL: Compares a value to all values in a set.
+    SELECT * FROM table WHERE column > ALL (SELECT column FROM other_table);
+    
+    ->ANY/SOME: Compares a value to any value in a set.
+    SELECT * FROM table WHERE column < ANY (SELECT column FROM other_table);
