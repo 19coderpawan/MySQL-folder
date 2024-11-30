@@ -1,0 +1,38 @@
+*****In SQL, clauses are components of statements that specify conditions, operations, and filters to manipulate and retrieve data from a database. 
+Each clause serves a specific purpose and helps in constructing effective queries.*****
+
+1.SELECT Clause
+    Purpose: Used to specify the columns that you want to retrieve from a database table.
+    Syntax:
+    SELECT column1, column2 FROM table_name;
+    
+    Example:
+    SELECT name, age FROM employees;
+2.FROM Clause
+    Purpose: Indicates the table from which to retrieve the data.
+    Syntax:
+    SELECT column1 FROM table_name;
+    
+    Example:
+    SELECT * FROM customers;
+3.WHERE Clause
+    Purpose: Filters records based on specified conditions. It can be used with SELECT, UPDATE, and DELETE statements.
+    Syntax:
+    SELECT * FROM table_name WHERE condition;
+    
+    Example:
+    SELECT * FROM employees WHERE salary > 50000;
+4.ORDER BY Clause
+    Purpose: Sorts the result set in ascending or descending order based on one or more columns.
+    Syntax:
+    SELECT * FROM table_name ORDER BY column1 [ASC|DESC];
+    
+    Example:
+    SELECT * FROM products ORDER BY price DESC;
+5. LIMIT Clause
+    Purpose: Specifies the maximum number of records to return from a result set.
+    Syntax:
+    SELECT * FROM table_name LIMIT number;
+    
+    Example:
+    SELECT * FROM employees LIMIT 10;
