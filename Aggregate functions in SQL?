@@ -1,0 +1,36 @@
+****SQL aggregate functions are used to perform calculations on a set of values and return a single value. 
+They are commonly used in conjunction with the GROUP BY clause to summarize data.**** 
+Below is a brief overview of the most commonly used aggregate functions in SQL:
+
+1.COUNT()
+  Purpose: Returns the number of rows that match a specified condition.
+    Usage:
+    COUNT(*): Counts all rows, including duplicates and NULLs.
+    COUNT(column_name): Counts non-NULL values in the specified column.
+    COUNT(DISTINCT column_name): Counts unique non-NULL values in the specified column.
+    Example:
+    SELECT COUNT(*) AS TotalEmployees FROM Employees; -- Counts all employees
+
+2.SUM()
+  Purpose: Returns the total sum of a numeric column.
+    Usage: Only works on numeric data types and ignores NULL values.
+    Example:
+    SELECT SUM(Salary) AS TotalSalary FROM Employees; -- Calculates total salary
+
+3.AVG()
+  Purpose: Returns the average value of a numeric column.
+    Usage: Ignores NULL values in the calculation.
+    Example:
+    SELECT AVG(Salary) AS AverageSalary FROM Employees; -- Calculates average salary
+
+4.MIN()
+  Purpose: Returns the smallest value in a specified column.
+    Usage: Works with numeric, string, and date data types, ignoring NULL values.
+    Example:
+    SELECT MIN(Salary) AS LowestSalary FROM Employees; -- Finds the lowest salary
+
+5.MAX()
+  Purpose: Returns the largest value in a specified column.
+    Usage: Similar to MIN(), it ignores NULL values.
+    Example:
+    SELECT MAX(Salary) AS HighestSalary FROM Employees; -- Finds the highest salary
