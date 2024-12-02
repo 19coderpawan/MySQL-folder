@@ -36,3 +36,18 @@ Each clause serves a specific purpose and helps in constructing effective querie
     
     Example:
     SELECT * FROM employees LIMIT 10;
+6. GROUP BY Clause
+    Purpose: Groups rows that have the same values in specified columns into summary rows, often used with aggregate functions like COUNT, SUM, AVG, etc.
+    Syntax:
+    SELECT column1, COUNT(*) FROM table_name GROUP BY column1;
+    
+    Example:
+    SELECT department, COUNT(*) FROM employees GROUP BY department;
+
+7. HAVING Clause
+    Purpose: Filters records after aggregation has been performed by the GROUP BY clause. It is similar to the WHERE clause but is used for aggregated data.
+    Syntax:
+    SELECT column1, SUM(column2) FROM table_name GROUP BY column1 HAVING SUM(column2) > value;
+    
+    Example:
+    SELECT department, SUM(salary) AS TotalSalary FROM employees GROUP BY department HAVING SUM(salary) > 100000;
