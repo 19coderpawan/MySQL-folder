@@ -51,3 +51,27 @@ Each clause serves a specific purpose and helps in constructing effective querie
     
     Example:
     SELECT department, SUM(salary) AS TotalSalary FROM employees GROUP BY department HAVING SUM(salary) > 100000;
+
+8. DISTINCT Clause
+    Purpose: Removes duplicate rows from the result set.
+    Syntax:
+    
+    SELECT DISTINCT column1 FROM table_name;
+    
+    Example:
+    
+    SELECT DISTINCT country FROM customers;
+9. UNION and UNION ALL
+    Purpose: Combines the result sets of two or more SELECT statements.
+    UNION: Removes duplicate records.
+    UNION ALL: Includes all records, including duplicates.
+    Syntax:
+    SELECT column1 FROM table1
+    UNION
+    SELECT column1 FROM table2;
+    
+    Example:
+    SELECT city FROM customers
+    UNION
+    SELECT city FROM suppliers;
+
