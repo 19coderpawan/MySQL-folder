@@ -75,3 +75,14 @@ Each clause serves a specific purpose and helps in constructing effective querie
     UNION
     SELECT city FROM suppliers;
 
+10. JOIN Clause
+    Purpose: Combines rows from two or more tables based on a related column between them.
+    Types of Joins:
+    INNER JOIN: Returns records with matching values in both tables.
+    LEFT JOIN (or LEFT OUTER JOIN): Returns all records from the left table and matched records from the right table.
+    RIGHT JOIN (or RIGHT OUTER JOIN): Returns all records from the right table and matches records from the left table.
+    FULL JOIN (or FULL OUTER JOIN): Returns all records when there is a match in either left or right table records.
+    Example of INNER JOIN:
+    SELECT employees. name, departments.name 
+    FROM employees 
+    INNER JOIN departments ON employees.department_id = departments.id;
