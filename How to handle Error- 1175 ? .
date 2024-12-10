@@ -1,0 +1,30 @@
+-----The error message , Error Code: 1175, indicates that you are currently in safe update mode in MySQL. This mode is designed to prevent accidental updates or deletions of data in your database.-----
+
+1.Purpose:
+  Safe update mode is a feature in MySQL that restricts certain operations (specifically UPDATE and DELETE) to prevent unintentional changes to a large number of rows.
+  It requires that any update or delete operation includes a WHERE clause that uses a key column (typically a primary key or indexed column).
+
+----Solutions to Fix Error Code 1175----
+Here are several methods to resolve this error:
+1.Disable Safe Update Mode Temporarily:
+  You can disable safe update mode for your current session by executing the following SQL command:
+  sql-:
+  SET SQL_SAFE_UPDATES = 0;
+
+After running this command, you can execute your UPDATE statement without restrictions.
+
+2.Re-enable Safe Update Mode:
+  If you want to be cautious and re-enable safe update mode after performing your updates, you can do so with:
+  sql-:
+  SET SQL_SAFE_UPDATES = 1;
+
+3.Disable Safe Updates Permanently:
+  ->If you want to disable safe update mode permanently (not recommended unless you're sure), you can do it through the MySQL Workbench interface:
+    Go to Edit -> Preferences.
+    Click on the SQL Editor tab.
+    Uncheck the option for "Safe Updates".
+    Click OK and reconnect to the server.
+
+4.Using Key Columns in WHERE Clause:
+  Instead of disabling safe update mode, consider modifying your query to include a key column in the WHERE clause. 
+  This way, you can keep safe updates enabled while ensuring that your queries execute successfully.
