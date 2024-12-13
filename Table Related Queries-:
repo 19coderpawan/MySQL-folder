@@ -16,3 +16,13 @@
             DELETE STUDENT
             WHERE marks<50; -- delete the data of all students who scored less than 50.
           {NOTE-: BE careful when deleting the data .}
+
+3. ADD COLUMN:- (add new column to the existing table).        
+    syntax-:
+            ALTER TABLE TABLE_NAME
+            ADD COLUMN COL_NAME DATATYPE CONSTRAINT;
+4. DROP COLUMN:- (DROP/DELETE THE COLUMN FROM THE EXISTING TABLE).
+    syntax:-    
+            ALTER TABLE TABLE_NAME
+            DROP COL_NAME;
+
