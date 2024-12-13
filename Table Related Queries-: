@@ -17,7 +17,7 @@
             WHERE marks<50; -- delete the data of all students who scored less than 50.
           {NOTE-: BE careful when deleting the data .}
 
-3. ADD COLUMN:- (add new column to the existing table).        
+3. ADD COLUMN:- (add a new column to the existing table).        
     syntax-:
             ALTER TABLE TABLE_NAME
             ADD COLUMN COL_NAME DATATYPE CONSTRAINT;
@@ -25,4 +25,15 @@
     syntax:-    
             ALTER TABLE TABLE_NAME
             DROP COL_NAME;
-
+5. RENAME TO-: (USED TO RENAME THE EXISTING THE TABLE NAME).
+    syntax-:
+            ALTER TABLE TABLE_NAME
+            RENAME TO NEW_NAME;
+6. CHANGE COLUMN-: (USED TO RENAME THE EXISTING THE COL_NAME).
+    syntax-:
+            ALTER TABLE TABLE_NAME
+            CHANGE COLUMN OLD_NAME NEW_NAME NEW_DATATYPE NEW_CONSTRAINT;
+7. MODIFY COLUMN-: (USED TO MODIFY/UPDATE THE DATATYPE AND CONSTRAINT).
+    syntax-:
+            ALTER TABLE TABLE_NAME
+            MODIFY COL_NAME NEW_DATATYPE NEW_CONTRAINT;
