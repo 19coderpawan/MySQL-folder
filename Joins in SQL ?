@@ -13,4 +13,35 @@ Types of Joins-:
               Example:
                   SELECT a.column1, b.column2
                   FROM table1 a
-                  LEFT JOIN table2 b ON a.common_column = b.common_column;              
+                  LEFT JOIN table2 b ON a.common_column = b.common_column;    
+  3. Right Join (or Right Outer Join):
+          A right join returns all rows from the right table and the matched rows from the left table. If there is no match, NULL values are returned for columns from the left table.
+              Example:
+                SELECT a.column1, b.column2
+                FROM table1 a
+                RIGHT JOIN table2 b ON a.common_column = b.common_column;
+  4. Full Join (or Full Outer Join):
+          A full join returns all rows when there is a match in either left or right table records. If there is no match, NULL values are returned for non-matching rows.
+          Note: MySQL does not support FULL JOIN directly; you can achieve similar results using UNION ALL.
+              Example:
+                SELECT a.column1, b.column2
+                FROM table1 a
+                LEFT JOIN table2 b ON a.common_column = b.common_column
+                UNION ALL
+                SELECT a.column1, b.column2
+                FROM table1 a
+                RIGHT JOIN table2 b ON a.common_column = b.common_column
+                WHERE a.common_column IS NULL;
+5. Cross Join:
+        A cross join returns the Cartesian product of both tables, meaning it combines every row of the first table with every row of the second table.
+              Example:
+                SELECT a.column1, b.column2
+                FROM table1 a
+                CROSS JOIN table2 b;
+
+6. Self Join:
+        A self-join is used to join a table to itself. This is useful for comparing rows within the same table.
+              Example:
+                SELECT a.column1, b.column1
+                FROM table1 a, table1 b
+                WHERE a.id <> b.id;  -- Example condition for comparison
