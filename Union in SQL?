@@ -1,0 +1,18 @@
+*** Union -: it is used to combine the result set of two or more select statements. Its gives you unique records [i.e -> it ignores the duplicte records].***
+
+To use it you have to meet certain conditions-:
+   1. Every select statement should have same number of coloumns.
+   2. Every coloumns must have same data types.
+   3. Coloumns in every select statement should be in the same order.
+
+syntax-:
+   Select * from tableA
+   UNION
+   Select * from tableB
+
+***Union All -: It is similar to the union but the only difference is that it gives you duplicate records also [i.e -> it does not ignores the duplicate records].***
+
+syntax-:
+  Select * from tableA
+  UNION ALL
+  Select * from tableB
