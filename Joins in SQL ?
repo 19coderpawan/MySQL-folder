@@ -1,0 +1,16 @@
+***Joins are a fundamental concept in SQL used to combine rows from two or more tables based on related columns. They allow you to retrieve data that is spread across multiple tables, which is essential in relational 
+databases where data is normalized and stored in separate tables.***
+
+Types of Joins-:
+  1. Inner Join:
+          An inner join returns only the rows that have matching values in both tables.
+          Example:
+                SELECT a.column1, b.column2
+                FROM table1 a
+                INNER JOIN table2 b ON a.common_column = b.common_column;
+  2. Left Join (or Left Outer Join):
+          A left join returns all rows from the left table and the matched rows from the right table. If there is no match, NULL values are returned for columns from the right table.
+              Example:
+                  SELECT a.column1, b.column2
+                  FROM table1 a
+                  LEFT JOIN table2 b ON a.common_column = b.common_column;              
