@@ -7,3 +7,11 @@ Syntax -:
     where column_name opertor
     (Subquery);
 
+
+Example-:
+    Select name
+    from student_table
+    where marks>=(select Avg(marks) from student_table);
+
+This query will filter out only the names of students who have scored more than the average class marks. Here the result of the outer query depends on the result of the inner query.
+
